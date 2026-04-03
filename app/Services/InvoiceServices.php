@@ -64,7 +64,7 @@ class InvoiceServices
         return Cache::remember('invoice_summary', 60, fn() => [
             'total_invoices'    => Invoice::count(),
             'total_revenue'     => Invoice::with('items')->get()->sum(fn($invoice) => 
-                                    $this->calculateTotals($invoice)['total']),
+                                    $this->calculateTotals($invoice)['net_amount']),
         ]);
     }
 }

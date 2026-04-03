@@ -30,7 +30,7 @@ class InvoiceController extends BaseApiController
     {
         try {
             $request->validate(['invoice_id' => 'required|integer|exists:invoices,id']);
-            return $this->successResponse($this->service->find($request->input('invoice_id')));
+            return $this->successResponse($this->service->find($request->input('invoice_id')), 'Invoice retrieved successfully');
         } catch (\Exception $e) {
             return $this->failureResponse('Failed to find invoice', 400, $e->getMessage());
         }
@@ -43,7 +43,7 @@ class InvoiceController extends BaseApiController
                 (int) $request->input('page', 1),
                 (int) $request->input('per_page', 15)
             );
-            return $this->paginationResponse($data);
+            return $this->paginationResponse($data, 'Invoices retrieved successfully');
         } catch (\Exception $e) {
             return $this->failureResponse('Failed to list invoices', 400, $e->getMessage());
         }
@@ -52,7 +52,7 @@ class InvoiceController extends BaseApiController
     public function summary(): JsonResponse
     {
         try {
-            return $this->successResponse($this->service->summary());
+            return $this->successResponse($this->service->summary(), 'Invoice summary retrieved successfully');
         } catch (\Exception $e) {
 
             return $this->failureResponse('Failed to retrieve invoice summary', 400, $e->getMessage());
