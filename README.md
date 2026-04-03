@@ -20,9 +20,10 @@ Used BaseApiController and ApiResponse for set a common structure for all respon
 
 # Project setup
 
-1. Generate project key using artisan command   - php artisan generate:key
-2. To create the database run the migration     - php artisan migration
-3. Then run the project                         - php artisan serve
+1. Run composer install, to create the vendor files (if vendor files missing)
+2. Generate project key using artisan command   - php artisan generate:key
+3. To create the database run the migration     - php artisan migration
+4. Then run the project                         - php artisan serve
 
 # Note
 
