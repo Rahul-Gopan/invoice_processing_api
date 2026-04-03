@@ -21,6 +21,7 @@ class ValidateClientKey
         if(!$key || $key !== $configKey) {
             return response()->json([
                 'success'   => false,
+                'status'    => 401,
                 'message'   => 'Invalid client key provided',  
                 'error'     => 'Unauthorized'
             ], 401);
