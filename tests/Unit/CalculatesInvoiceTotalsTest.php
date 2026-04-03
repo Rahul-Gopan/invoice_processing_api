@@ -17,7 +17,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 0,
         ]);
 
@@ -46,7 +46,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 20,  // 20% tax
         ]);
 
@@ -68,7 +68,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 10,  // 10% tax
         ]);
 
@@ -90,7 +90,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 0,
         ]);
 
@@ -113,7 +113,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 100,  // 100% tax
         ]);
 
@@ -137,7 +137,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 15,
         ]);
 
@@ -163,7 +163,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 5,
         ]);
 
@@ -203,7 +203,7 @@ class CalculatesInvoiceTotalsTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => 10,
         ]);
 

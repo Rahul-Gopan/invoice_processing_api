@@ -23,8 +23,8 @@ class InvoiceServiceTest extends TestCase
     public function test_can_create_invoice_with_items(): void
     {
         $data = [
-            'client_name' => 'John Doe',
-            'client_email' => 'john@example.com',
+            'client_name' => 'Alex Mathew',
+            'client_email' => 'alex@example.com',
             'tax_rate' => 10,
             'items' => [
                 ['title' => 'Item 1', 'description' => 'Test item', 'quantity' => 2, 'unit_price' => 100],
@@ -35,8 +35,8 @@ class InvoiceServiceTest extends TestCase
         $invoice = $this->service->create($data);
 
         $this->assertInstanceOf(Invoice::class, $invoice);
-        $this->assertEquals('John Doe', $invoice->client_name);
-        $this->assertEquals('john@example.com', $invoice->client_email);
+        $this->assertEquals('Alex Mathew', $invoice->client_name);
+        $this->assertEquals('alex@example.com', $invoice->client_email);
         $this->assertEquals(10, $invoice->tax_rate);
         $this->assertCount(2, $invoice->items);
     }
@@ -80,7 +80,7 @@ class InvoiceServiceTest extends TestCase
     public function test_can_find_invoice_by_id(): void
     {
         $data = [
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'items' => [['title' => 'Item', 'quantity' => 1, 'unit_price' => 100]]
         ];
 
@@ -184,7 +184,7 @@ class InvoiceServiceTest extends TestCase
     public function test_create_invoice_requires_items(): void
     {
         $data = [
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'items' => []  // Empty items
         ];
 
@@ -197,7 +197,7 @@ class InvoiceServiceTest extends TestCase
     public function test_invoice_items_relationship(): void
     {
         $data = [
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'items' => [
                 ['title' => 'Item 1', 'quantity' => 2, 'unit_price' => 50],
                 ['title' => 'Item 2', 'quantity' => 1, 'unit_price' => 100],

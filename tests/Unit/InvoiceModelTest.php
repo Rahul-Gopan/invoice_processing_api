@@ -15,8 +15,8 @@ class InvoiceModelTest extends TestCase
     {
         $data = [
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
-            'client_email' => 'test@example.com',
+            'client_name' => 'Alex Mathew',
+            'client_email' => 'alex@example.com',
             'tax_rate' => 10,
             'gross_total' => 1000,
             'net_amount' => 1100,
@@ -25,8 +25,8 @@ class InvoiceModelTest extends TestCase
         $invoice = Invoice::create($data);
 
         $this->assertEquals('INV-2026-0001', $invoice->invoice_number);
-        $this->assertEquals('Test Client', $invoice->client_name);
-        $this->assertEquals('test@example.com', $invoice->client_email);
+        $this->assertEquals('Alex Mathew', $invoice->client_name);
+        $this->assertEquals('alex@example.com', $invoice->client_email);
         $this->assertEquals(10, $invoice->tax_rate);
         $this->assertEquals(1000, $invoice->gross_total);
         $this->assertEquals(1100, $invoice->net_amount);
@@ -36,7 +36,7 @@ class InvoiceModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'tax_rate' => '10.5',
             'gross_total' => '1000.50',
             'net_amount' => '1100.55',
@@ -54,7 +54,7 @@ class InvoiceModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         InvoiceItem::create([
@@ -78,7 +78,7 @@ class InvoiceModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
             'client_email' => null,
         ]);
 
@@ -89,7 +89,7 @@ class InvoiceModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         $this->assertEquals(0, $invoice->tax_rate);

@@ -15,7 +15,7 @@ class InvoiceItemModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         $item = InvoiceItem::create([
@@ -37,7 +37,7 @@ class InvoiceItemModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         // This should work if mass assignment allows it
@@ -55,7 +55,7 @@ class InvoiceItemModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         $item = InvoiceItem::create([
@@ -73,7 +73,7 @@ class InvoiceItemModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         $item = InvoiceItem::create([
@@ -93,7 +93,7 @@ class InvoiceItemModelTest extends TestCase
     {
         $invoice = Invoice::create([
             'invoice_number' => 'INV-2026-0001',
-            'client_name' => 'Test Client',
+            'client_name' => 'Alex Mathew',
         ]);
 
         $item = InvoiceItem::create([
